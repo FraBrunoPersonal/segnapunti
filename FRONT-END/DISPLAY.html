@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Display</title>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="socket.io/socket.io.js"></script>
+  <script src="FRONT-END/client.js"></script>
+  <link rel="stylesheet" href="FRONT-END/master.css">
+</head>
+
+<body style="background-color: black; color: white;">
+
+  <div id="app" class="public"><!--
+    <p class="teamA">{{teamAName}}</p>
+    <p class="teamB">{{teamBName}}</p>
+    <div class="man man1">
+      <div class="center">
+        <p class="manName">Team A set</p>
+        <p class="number">{{aSet}}</p>
+      </div>
+    </div>
+    <div class="man man2">
+      <div class="center">
+        <p class="manName">Team B set</p>
+        <p class="number">{{bSet}}</p>
+      </div>
+    </div>
+    <div class="man man3">
+      <div class="center">
+        <p class="manName">Team A point</p>
+        <p class="number">{{aPoint}}</p>
+      </div>
+    </div>
+    <div class="man man4">
+      <div class="center">
+        <p class="manName">Team B point</p>
+        <p class="number">{{bPoint}}</p>
+      </div>
+    </div>
+  </div>-->
+  <!--
+      parte alta segnapunti con i set
+    -->
+    <h2 align="center" style="font-size: 50px;">SET</h2>
+    <div class="set">
+      <div style="float: left; width: 50%; margin-right: 5px;">
+        <h3 align="center" style="font-size: 45px;">{{teamAName}}</h3>
+        <p id="AS">
+        {{aSet}}
+        </p>
+      </div>
+      <div style="overflow: hidden;width: auto;">
+        <h3 align="center" style="font-size: 45px;">{{teamBName}}</h3>
+        <p id="BS">
+        {{bSet}}
+        </p>
+      </div>
+    </div>
+    <!--
+      parte bassa segnapunti con i punti
+    -->
+    <!--<div class="punti">-->
+      <h2 align="center" style="font-size: 70px; position: absolute; top: 55%; left: 43%">PUNTI</h2>
+      <div class="puntiA">
+        <div>
+          <h3 align="center" style="font-size: 60px;">{{teamAName}}</h3>
+          <p class="sinistraP">
+            {{aPoint}}
+          </p>
+        </div>
+      </div>
+    <!--</div>-->
+    <div class="puntiB">
+      <div>
+        <h3 align="center" style="font-size: 60px;">{{teamBName}}</h3>
+        <p class="destraP">
+          {{bPoint}}
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

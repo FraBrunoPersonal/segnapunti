@@ -1,0 +1,19 @@
+{
+  "name": "contapunti",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "scssRender": "node-sass ./FRONT-END/master.sass -o ./FRONT-END",
+    "scssRenderer": "node-sass --watch ./FRONT-END/master.sass -o ./FRONT-END",
+    "test": "node index.js",
+    "deploy": "npm run scssRender && npm run test"
+  },
+  "author": "Pietro Jomini",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "node-sass": "^4.11.0",
+    "npm": "^6.9.0",
+    "socket.io": "^2.2.0"
+  }
+}

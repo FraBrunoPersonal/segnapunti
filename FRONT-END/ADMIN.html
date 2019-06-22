@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Admin</title>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="socket.io/socket.io.js"></script>
+  <script src="FRONT-END/client.js"></script>
+  <link rel="stylesheet" href="FRONT-END/master.css">
+</head>
+
+<body onload="return nameTeam();">
+  <div id="app" class="private">
+    <div class="sep"></div>
+    <p class="teamA">{{teamAName}}</p>
+    <p class="teamB">{{teamBName}}</p>
+    <div class="man man1">
+      <div class="center">
+        <p class="number">Set: {{aSet}}</p>
+        <button class="buttonS button1" v-on:click="setA(+1)">+</button>
+        <button class="buttonS button3" v-on:click="setA(-1)">-</button>
+      </div>
+    </div>
+    <div class="man man2">
+      <div class="center">
+        <p class="number">Set: {{bSet}}</p>
+        <button class="buttonS button1" v-on:click="setB(+1);">+</button>
+        <button class="buttonS button3" v-on:click="setB(-1);">-</button>
+      </div>
+    </div>
+    <div class="man man3">
+      <div class="center">
+        <p class="number">Point: {{aPoint}}</p>
+        <button class="buttonP button1" v-on:click="pointA(+1);">+</button>
+        <button class="buttonP button3" v-on:click="pointA(-1);">-</button>
+        <br>
+      </div>
+      <button class="buttonP button5" v-on:click="pointA(0);">reset</button>
+
+    </div>
+    <div class="man man4">
+      <div class="center">
+        <p class="number">Point: {{bPoint}}</p>
+        <button class="buttonP button1" v-on:click="pointB(+1);">+</button>
+        <button class="buttonP button3" v-on:click="pointB(-1);">-</button>
+        <br>
+      </div>
+      <button class="buttonP button4" v-on:click="pointB(0);">reset</button>
+
+    </div>
+  </div>
+</body>
+
+</html>
