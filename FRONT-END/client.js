@@ -1,14 +1,25 @@
-function nameTeam() {
+/*function nameTeam() {
   var tA = prompt("nome team A");
   var tB = prompt("nome team B");
   app.teamAName = tA;
   app.teamBName = tB;
-  /*var element = document.getElementsByClassName("teamA");
+  var element = document.getElementsByClassName("teamA");
   element[0].innerHTML = tA;
   var element = document.getElementsByClassName("teamB");
-  element[0].innerHTML = tB;*/
+  element[0].innerHTML = tB;
   socket.emit('namesA', ta);
   socket.emit('namesB', tb);
+}*/
+
+function OrologioScorrevole()
+{
+    var data = new Date();
+    var hh = data.getHours();
+    var mm = data.getMinutes();
+    var ss = data.getSeconds();
+    var ora = hh + ":" + mm + ":" + ss;
+    document.getElementById("orologio").innerText = ora;
+    window.setTimeout("OrologioScorrevole()", 1000);
 }
 
 $(() => {

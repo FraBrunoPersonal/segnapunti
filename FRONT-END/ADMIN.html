@@ -11,7 +11,15 @@
   <link rel="stylesheet" href="FRONT-END/master.css">
 </head>
 
-<body onload="return nameTeam();">
+<!--
+  onload="return nameTeam();"
+-->
+
+<body onload="OrologioScorrevole()">
+  <div class="oroInCentro">
+    <span id="orologio"></span>
+  </div>
+
   <div id="app" class="private">
     <div class="sep"></div>
     <p class="teamA">{{teamAName}}</p>
@@ -32,7 +40,7 @@
     </div>
     <div class="man man3">
       <div class="center">
-        <p class="number">Point: {{aPoint}}</p>
+        <p class="number">Punti: {{aPoint}}</p>
         <button class="buttonP button1" v-on:click="pointA(+1);">+</button>
         <button class="buttonP button3" v-on:click="pointA(-1);">-</button>
         <br>
@@ -42,7 +50,7 @@
     </div>
     <div class="man man4">
       <div class="center">
-        <p class="number">Point: {{bPoint}}</p>
+        <p class="number">Punti: {{bPoint}}</p>
         <button class="buttonP button1" v-on:click="pointB(+1);">+</button>
         <button class="buttonP button3" v-on:click="pointB(-1);">-</button>
         <br>
